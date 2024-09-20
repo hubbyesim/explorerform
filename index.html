@@ -94,6 +94,33 @@
     </div>
 
     <script type="module">
+        // Initialize i18n-iso-countries for country select
+        import countries from 'https://esm.sh/i18n-iso-countries';
+        fetch('https://raw.githubusercontent.com/hubbyesim/node-i18n-iso-countries/refs/heads/master/langs/en.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json(); // Parse the JSON
+            })
+            .then(data => {
+                countries.registerLocale(data, 'en');
+                // Get the ISO2 names (alpha-2) and ISO3 codes (alpha-3)
+                const destinationSelect = document.getElementById('destination');
+                const iso3Codes = countries.getAlpha3Codes();
+
+                // Create a key-value pair of ISO3 -> official country name
+                const iso3CountryNames = Object.keys(iso3Codes).map((item) => {
+                    const name = countries.getName(item, 'en');
+                    const option = document.createElement('option');
+                    option.value = item;
+                    option.textContent = name;
+                    destinationSelect.appendChild(option);
+                }, {});
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
         document.getElementById('esimForm').addEventListener('submit', async function (e) {
             e.preventDefault();
 
