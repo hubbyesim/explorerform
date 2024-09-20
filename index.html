@@ -18,197 +18,199 @@
         <div id="toast" class="hidden fixed top-5 right-5 bg-green-500 text-white p-4 rounded-lg shadow-lg">Success!</div>
         <h2 class="text-2xl font-semibold mb-4">eSIM Request Form</h2>
 
-        <form id="esimForm" class="space-y-4">
+        <form id="esimForm" class="space-y-6">
 
             <!-- Token Field -->
             <div>
-                <label for="token" class="block text-sm font-medium text-gray-700">Token</label>
-                <input type="text" id="token" name="token" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter token" required>
+                <label for="token" class="block text-base font-medium text-gray-700">Token</label>
+                <input type="text" id="token" name="token" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-3" placeholder="Enter token" required>
             </div>
 
             <!-- First Name -->
             <div>
-                <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
-                <input type="text" id="firstName" name="firstName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter first name" required>
+                <label for="firstName" class="block text-base font-medium text-gray-700">First Name</label>
+                <input type="text" id="firstName" name="firstName" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-3" placeholder="Enter first name" required>
             </div>
 
             <!-- Destination (Country Select) -->
             <div>
-                <label for="destination" class="block text-sm font-medium text-gray-700">Destination</label>
-                <select id="destination" name="destination" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                <label for="destination" class="block text-base font-medium text-gray-700">Destination</label>
+                <select id="destination" name="destination" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-3" required>
                     <option value="">Select country</option>
                 </select>
             </div>
 
             <!-- Package Size (Radio Buttons) -->
             <div>
-                <label class="block text-sm font-medium text-gray-700">Package Size</label>
+                <label class="block text-base font-medium text-gray-700">Package Size</label>
                 <div class="mt-2 space-y-2">
                     <label class="inline-flex items-center">
                         <input type="radio" name="packageSize" value="1GB" class="form-radio text-indigo-600" required>
-                        <span class="ml-2">1 GB</span>
+                        <span class="ml-3 text-lg">1 GB</span>
                     </label>
                     <label class="inline-flex items-center">
                         <input type="radio" name="packageSize" value="3GB" class="form-radio text-indigo-600">
-                        <span class="ml-2">3 GB</span>
+                        <span class="ml-3 text-lg">3 GB</span>
                     </label>
                     <label class="inline-flex items-center">
                         <input type="radio" selected="selected" name="packageSize" value="5GB" class="form-radio text-indigo-600">
-                        <span class="ml-2">5 GB</span>
+                        <span class="ml-3 text-lg">5 GB</span>
                     </label>
                     <label class="inline-flex items-center">
                         <input type="radio" name="packageSize" value="10GB" class="form-radio text-indigo-600">
-                        <span class="ml-2">10 GB</span>
+                        <span class="ml-3 text-lg">10 GB</span>
                     </label>
                     <label class="inline-flex items-center">
                         <input type="radio" name="packageSize" value="20GB" class="form-radio text-indigo-600">
-                        <span class="ml-2">20 GB</span>
+                        <span class="ml-3 text-lg">20 GB</span>
                     </label>
                 </div>
             </div>
 
             <!-- Customer Email -->
             <div>
-                <label for="customerEmail" class="block text-sm font-medium text-gray-700">Customer Email</label>
-                <input type="email" id="customerEmail" name="customerEmail" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="customer@example.com" required>
+                <label for="customerEmail" class="block text-base font-medium text-gray-700">Customer Email</label>
+                <input type="email" id="customerEmail" name="customerEmail" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-3" placeholder="customer@example.com" required>
             </div>
 
             <!-- Employee Email -->
             <div>
-                <label for="employeeEmail" class="block text-sm font-medium text-gray-700">Employee Email</label>
-                <input type="email" id="employeeEmail" name="employeeEmail" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="employee@example.com" required>
+                <label for="employeeEmail" class="block text-base font-medium text-gray-700">Employee Email</label>
+                <input type="email" id="employeeEmail" name="employeeEmail" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-3" placeholder="employee@example.com" required>
             </div>
 
             <!-- Quantity Field -->
             <div>
-                <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
-                <input type="number" id="quantity" name="quantity" min="1" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter quantity" required>
+                <label for="quantity" class="block text-base font-medium text-gray-700">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-3" placeholder="Enter quantity" required>
             </div>
-            <div class="mt-6">
-                <button id="submitBtn" type="submit" class="w-full px-4 py-2 bg-indigo-600 text-white font-medium rounded-md hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 flex justify-center items-center">
-                    <span id="spinner" class="hidden spinner-border animate-spin w-4 h-4 border-2 rounded-full mr-2"></span>
+
+            <!-- Submit Button with Spinner -->
+            <div class="mt-8">
+                <button id="submitBtn" type="submit" class="w-full px-6 py-3 bg-indigo-600 text-white text-lg font-medium rounded-md hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 flex justify-center items-center">
+                    <span id="spinner" class="hidden spinner-border animate-spin w-5 h-5 border-2 rounded-full mr-3"></span>
                     <span>Submit</span>
                 </button>
             </div>
         </form>
-    </div>
 
-    <script type="module">
-        // Initialize i18n-iso-countries for country select
-        import countries from 'https://esm.sh/i18n-iso-countries';
 
-        document.addEventListener('DOMContentLoaded', function () {
-            fetch('https://raw.githubusercontent.com/hubbyesim/node-i18n-iso-countries/refs/heads/master/langs/en.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
+        <script type="module">
+            // Initialize i18n-iso-countries for country select
+            import countries from 'https://esm.sh/i18n-iso-countries';
+
+            document.addEventListener('DOMContentLoaded', function () {
+                fetch('https://raw.githubusercontent.com/hubbyesim/node-i18n-iso-countries/refs/heads/master/langs/en.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json(); // Parse the JSON
+                    })
+                    .then(data => {
+                        countries.registerLocale(data, 'en');
+                        // Get the ISO2 names (alpha-2) and ISO3 codes (alpha-3)
+                        const destinationSelect = document.getElementById('destination');
+                        const iso3Codes = countries.getAlpha3Codes();
+
+                        // Create a key-value pair of ISO3 -> official country name
+                        const iso3CountryNames = Object.keys(iso3Codes).map((item) => {
+                            const name = countries.getName(item, 'en');
+                            const option = document.createElement('option');
+                            option.value = item;
+                            option.textContent = name;
+                            destinationSelect.appendChild(option);
+                        }, {});
+                    })
+                    .catch(error => {
+                        console.error('There was a problem with the fetch operation:', error);
+                    });
+                document.getElementById('esimForm').addEventListener('submit', async function (e) {
+                    e.preventDefault();
+
+                    const form = e.target;
+                    const token = form.token.value;
+                    const firstName = form.firstName.value;
+                    const customerEmail = form.customerEmail.value;
+                    const packageSize = form.packageSize.value;
+                    const destination = form.destination.value;
+                    const quantity = parseInt(form.quantity.value, 10);
+                    const today = new Date().toISOString().split('T')[0];
+                    const returnDate = new Date(today);
+                    returnDate.setDate(returnDate.getDate() + 31);
+                    const returnDateString = returnDate.toISOString().split('T')[0];
+
+                    const packageSpecifications = [];
+                    for (let i = 0; i < quantity; i++) {
+                        packageSpecifications.push({
+                            size: packageSize,
+                            destination: destination
+                        });
                     }
-                    return response.json(); // Parse the JSON
-                })
-                .then(data => {
-                    countries.registerLocale(data, 'en');
-                    // Get the ISO2 names (alpha-2) and ISO3 codes (alpha-3)
-                    const destinationSelect = document.getElementById('destination');
-                    const iso3Codes = countries.getAlpha3Codes();
 
-                    // Create a key-value pair of ISO3 -> official country name
-                    const iso3CountryNames = Object.keys(iso3Codes).map((item) => {
-                        const name = countries.getName(item, 'en');
-                        const option = document.createElement('option');
-                        option.value = item;
-                        option.textContent = name;
-                        destinationSelect.appendChild(option);
-                    }, {});
-                })
-                .catch(error => {
-                    console.error('There was a problem with the fetch operation:', error);
+                    const body = {
+                        departure_date: today,
+                        return_date: returnDateString,
+                        first_name: firstName,
+                        email: customerEmail,
+                        locale: "de-De",
+                        package_specifications: packageSpecifications,
+                        communication_options: {
+                            should_send_message: true,
+                            channels: ["EMAIL"]
+                        }
+                    };
+
+                    const submitBtn = document.getElementById('submitBtn');
+                    const spinner = document.getElementById('spinner');
+                    const toast = document.getElementById('toast');
+
+                    // Show spinner and disable button
+                    submitBtn.disabled = true;
+                    spinner.classList.remove('hidden');
+
+                    try {
+                        const response = await fetch(`https://api.hubby.dev/api/booking`, {
+                            method: 'POST',
+                            headers: {
+                                'Authorization': 'Bearer ' + token,
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(body)
+                        });
+
+                        if (response.ok) {
+                            showToast('Form submitted successfully!', 'success');
+                            form.reset(); // Reset the form
+                        } else {
+                            showToast('Failed to submit form.', 'error');
+                        }
+                    } catch (error) {
+                        console.error('Error submitting form:', error);
+                        showToast('An error occurred.', 'error');
+                    } finally {
+                        // Re-enable button and hide spinner
+                        submitBtn.disabled = false;
+                        spinner.classList.add('hidden');
+                    }
                 });
-            document.getElementById('esimForm').addEventListener('submit', async function (e) {
-                e.preventDefault();
 
-                const form = e.target;
-                const token = form.token.value;
-                const firstName = form.firstName.value;
-                const customerEmail = form.customerEmail.value;
-                const packageSize = form.packageSize.value;
-                const destination = form.destination.value;
-                const quantity = parseInt(form.quantity.value, 10);
-                const today = new Date().toISOString().split('T')[0];
-                const returnDate = new Date(today);
-                returnDate.setDate(returnDate.getDate() + 31);
-                const returnDateString = returnDate.toISOString().split('T')[0];
-
-                const packageSpecifications = [];
-                for (let i = 0; i < quantity; i++) {
-                    packageSpecifications.push({
-                        size: packageSize,
-                        destination: destination
-                    });
-                }
-
-                const body = {
-                    departure_date: today,
-                    return_date: returnDateString,
-                    first_name: firstName,
-                    email: customerEmail,
-                    locale: "de-De",
-                    package_specifications: packageSpecifications,
-                    communication_options: {
-                        should_send_message: true,
-                        channels: ["EMAIL"]
-                    }
-                };
-
-                const submitBtn = document.getElementById('submitBtn');
-                const spinner = document.getElementById('spinner');
-                const toast = document.getElementById('toast');
-
-                // Show spinner and disable button
-                submitBtn.disabled = true;
-                spinner.classList.remove('hidden');
-
-                try {
-                    const response = await fetch(`https://api.hubby.dev/api/booking`, {
-                        method: 'POST',
-                        headers: {
-                            'Authorization': 'Bearer ' + token,
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(body)
-                    });
-
-                    if (response.ok) {
-                        showToast('Form submitted successfully!', 'success');
-                        form.reset(); // Reset the form
+                function showToast(message, type) {
+                    const toast = document.getElementById('toast');
+                    toast.textContent = message;
+                    toast.classList.remove('hidden');
+                    toast.classList.remove('bg-green-500', 'bg-red-500');
+                    if (type === 'success') {
+                        toast.classList.add('bg-green-500');
                     } else {
-                        showToast('Failed to submit form.', 'error');
+                        toast.classList.add('bg-red-500');
                     }
-                } catch (error) {
-                    console.error('Error submitting form:', error);
-                    showToast('An error occurred.', 'error');
-                } finally {
-                    // Re-enable button and hide spinner
-                    submitBtn.disabled = false;
-                    spinner.classList.add('hidden');
+
+                    // Hide toast after 3 seconds
+                    setTimeout(() => {
+                        toast.classList.add('hidden');
+                    }, 3000);
                 }
             });
-
-            function showToast(message, type) {
-                const toast = document.getElementById('toast');
-                toast.textContent = message;
-                toast.classList.remove('hidden');
-                toast.classList.remove('bg-green-500', 'bg-red-500');
-                if (type === 'success') {
-                    toast.classList.add('bg-green-500');
-                } else {
-                    toast.classList.add('bg-red-500');
-                }
-
-                // Hide toast after 3 seconds
-                setTimeout(() => {
-                    toast.classList.add('hidden');
-                }, 3000);
-            }
-        });
-    </script>
+        </script>
 </body>
